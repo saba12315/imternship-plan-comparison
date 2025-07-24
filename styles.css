@@ -1,0 +1,133 @@
+/* Reset and Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f9fafb;
+    color: #1f2937;
+    padding: 20px;
+    line-height: 1.6;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .page-header {
+    text-align: center;
+  }
+  
+  /* Table Layout */
+  .comparison-table-wrapper {
+    overflow-x: auto;
+  }
+  
+  .comparison-table {
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 1fr);
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 700px;
+  }
+  
+  .table-header, .table-row {
+    display: contents;
+  }
+  
+  .feature-col, .plan-col {
+    padding: 16px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: center;
+  }
+  
+  .feature-col {
+    text-align: left;
+    background-color: #f3f4f6;
+    font-weight: 600;
+  }
+  
+  .plan-col.most-popular {
+    background-color: #e0f2fe;
+    position: relative;
+  }
+  
+  .badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    background-color: #2563eb;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 999px;
+    margin-top: 4px;
+  }
+  
+  /* ✅ and ❌ styles */
+  .plan-col {
+    font-size: 1.2rem;
+  }
+  
+  .plan-col:contains("✅") {
+    color: green;
+  }
+  
+  .plan-col:contains("❌") {
+    color: red;
+  }
+  
+  /* CTA Section */
+  .cta {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .apply-button {
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .apply-button:hover {
+    background-color: #1d4ed8;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .comparison-table {
+      min-width: 100%;
+    }
+  
+    .table-header, .table-row {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  
+    .feature-col, .plan-col {
+      text-align: left;
+      border-bottom: none;
+      border-top: 1px solid #e5e7eb;
+    }
+  
+    .plan-col.most-popular {
+      background-color: #dbeafe;
+    }
+  }
+  
